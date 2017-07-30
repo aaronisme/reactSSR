@@ -1,4 +1,4 @@
-export default `
+export default (app) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@ export default `
   <title>ReactSSR</title>
 </head>
 <body>
-  <div>Hello React SSR!</div>
+  <div id="root">${app}</div>
   <script src="/public/bundle.js"></script>
 </body>
 </html>
