@@ -5,14 +5,22 @@
   "author": "chen.dong <chen_dong85@foxmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node ./src/app.js"
+    "build": "webpack --config=./webpack.config.js",
+    "start": "npm run build && node ./src/app.js"
   },
   "dependencies": {
     "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
     "express": "^4.15.3",
+    "path": "^0.12.7",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "webpack": "^3.4.1"
   },
-
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1"
+  }
 }
