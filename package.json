@@ -1,0 +1,10 @@
+{
+  "name": "reactSSR",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "chen.dong <chen_dong85@foxmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/app.js"
+  }
+}
