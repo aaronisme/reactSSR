@@ -11,6 +11,8 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
-    "express": "^4.15.3"
-  }
+    "express": "^4.15.3",
+    "webpack": "^3.4.1"
+  },
+
 }
