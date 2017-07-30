@@ -8,13 +8,12 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      loading: false,
+      loading: true,
       userData: []
     }
   }
 
   componentDidMount() {
-    this.setState({laoding: true})
     fetch('//localhost:8080/api').then(
       (response) => {
         if (response.status >= 400) {
