@@ -1,1 +1,2 @@
-console.log('hello SSR')
+require('babel-register')
+require('./server')
