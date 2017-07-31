@@ -1,4 +1,4 @@
-export default (app) => `
+export default (app, data) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +9,9 @@ export default (app) => `
 </head>
 <body>
   <div id="root">${app}</div>
+  <script>
+    var _data = ${JSON.stringify(data)}
+  </script>
   <script src="/public/bundle.js"></script>
 </body>
 </html>

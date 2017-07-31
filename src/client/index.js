@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../components/App';
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+
+if(window._data){
+  ReactDOM.render(<App userData={window._data}/>, document.getElementById("root"));
+}
 
 
 // export default (() => {
