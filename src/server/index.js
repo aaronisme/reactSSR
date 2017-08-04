@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import middleware from './middleware';
 import userData from '../data/user.json'
+import jsonData from '../data/myjsonfile.json'
 
 const app =  express();
 
@@ -9,7 +10,7 @@ app.set('host', process.env.HOST || '0.0.0.0');
 app.set('port', process.env.PORT || '8080');
 
 app.get('/api', (req, res) => {
-  setTimeout(() => res.status(200).json(userData), 2000)
+  return res.status(200).json(jsonData)
 })
 
 app.get('/', middleware);
