@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOMServer from 'react-dom/server';
+import ReactDOMStream from "react-dom-stream/server";
 import App from '../components/App';
 
-export default (req, res, next) => {
+export default (req, res) => {
   const startTime = Date.now()
-  const appString = ReactDOMServer.renderToString(<App />)
+  const stream = ReactDOMStream.renderToString(<App />)
   const endTime = Date.now()
-  console.log("Rendering String Time is", endTime - startTime)
-  res.locals = {time: endTime - startTime, appString}
-  next()
+  console.log('rendering Time is', endTime - startTime)
+  stream.pipe(res, {end: false});
+	stream.on("end", function() {
+		res.end();
+	});
 }

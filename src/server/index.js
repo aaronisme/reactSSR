@@ -14,7 +14,7 @@ app.get('/api', (req, res) => {
   return res.status(200).json(jsonData)
 })
 
-app.get('/', middleware, count);
+app.get('/', middleware);
 
 app.use('/public', express.static(path.join(__dirname, '../../public')));
 
