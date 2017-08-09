@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config=./webpack.config.js",
-    "start": "npm run build && node ./src/app.js"
+    "start": "npm run build && node ./src/app.js",
+    "prod": "NODE_ENV=production npm run start"
   },
   "dependencies": {
     "babel-preset-env": "^1.6.0",
